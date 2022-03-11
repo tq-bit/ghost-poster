@@ -2,7 +2,7 @@ import { getNetworkInterfaces } from './util/network.util';
 
 const HOST: string = '0.0.0.0';
 const NETWORK_HOST: any = getNetworkInterfaces();
-const PORT: Number = 9002;
+const PORT: Number = 8080;
 
 import express from 'express';
 import logger from './util/logger.util';
@@ -12,7 +12,7 @@ import apiRouter from './routes/api.router';
 const app: express.Application = express();
 
 app.use(accessLogger);
-app.use(express.json());
+app.use(express.json({limit: '50mb'}));
 
 app.use('/api', apiRouter);
 
