@@ -7,8 +7,9 @@
     "dev": "nodemon src/index && webpack --mode development --watch",
     "build": "rimraf -r dist && webpack",
     "start": "node dist/index.js",
-    "start:daemon": "pm2 start dist/index.js -n post_from_ghost_9002",
-    "stop": "pm2 delete post_from_ghost_9002"
+    "reload": "git pull && npm run rebuild && npm run start:daemon",
+    "start:daemon": "pm2 start dist/index.js -n GhostPoster9000",
+    "stop": "pm2 delete GhostPoster9000"
   },
   "author": "Tobias Quante",
   "license": "MIT",
