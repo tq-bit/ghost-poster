@@ -2,7 +2,7 @@ import { getNetworkInterfaces } from './util/network.util';
 
 const HOST: string = '0.0.0.0';
 const NETWORK_HOST: any = getNetworkInterfaces();
-const PORT: Number = 8080;
+const PORT: Number = 9000;
 
 import express from 'express';
 import logger from './util/logger.util';
